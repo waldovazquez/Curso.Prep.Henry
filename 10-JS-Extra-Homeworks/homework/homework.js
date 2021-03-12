@@ -15,21 +15,10 @@ function deObjetoAmatriz(objeto){
 
 
 function numberOfCharacters(string) {
-  //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
+  //La función recibe un string. Recorre el string y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-/*
-  objeto = {};
-  for(i=0;i<string.length;i++){
-    if(objeto.hasOwnProperty(string[i]) === true){
-      objeto[string[i]]++;
-    }else{
-      Object.defineProperty(objeto, string[i], { value :  1})
-    }
-    return objeto;
-  }
-*/
 }
 
 
@@ -60,11 +49,6 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-/* let newString = '';
-  for(i=0;i<str.length;i++){
-    newString = 
-  }
-*/
 } 
 
 
@@ -111,7 +95,16 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+  let interseccion = [];
+  for(i=0;i<arreglo1.length;i++){
+    for(y=0;y<arreglo2.length;y++){
+      if(arreglo1[i]===arreglo2[y]){
+        interseccion.push(arreglo1[i]);
+      }
+    }
+  }
+  return interseccion; 
 }
 
 
